@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+<style>
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover { background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+  }
+body {
+            background-color: #85c1e9;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+.box {
+  background-color: #e5e7e9;
+  max-width: 400px;
+            margin: 10px auto;
+            padding: 10px 10px;
+            box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+button{
+background-color: #52be80;
+}
+</style>
+</head>
+<body>
+<h1>Welcome <span th:text="${name}" !></span> to Indian Bank</h1><br>
+
+<div class="box"><span>Add New Tour</span></br><a th:href = "@{addtour}"><button>Click Here</button></a></div>
+<div class="box"><span>View Booked Tours</span></br><a th:href = "@{viewtours}"><button>Click Here</button></a></div>
+<div class="box"><span>List of Registered Customer</span></br><a th:href = "@{getAccountBalance(userEmail=${email})}"><button>Click Here</button></a></div>
+
+
+	</div>
+</body>
+</html>
