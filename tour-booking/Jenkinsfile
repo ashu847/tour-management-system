@@ -3,13 +3,13 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-                git "https://github.com/ashu847/tour-management-system.git"
+                bat "git clone https://github.com/ashu847/tour-management-system.git"
             }
         }
         
          stage("package"){
             steps{
-            sh "mvn clean package"
+            bat "mvn clean package"
             }
         }
     }
